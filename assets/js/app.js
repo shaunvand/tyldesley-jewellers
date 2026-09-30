@@ -184,7 +184,6 @@ $$('.bd').forEach((b, i) => b.style.setProperty('--d', i % 6));
 // hero copy drifts away as you scroll
 if (!reduced) {
   gsap.to('.hero__copy', { yPercent: -18, opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: 'top top', end: 'bottom 20%', scrub: true } });
-  gsap.to('.hero__caption', { opacity: 0, ease: 'none', scrollTrigger: { trigger: '.hero', start: '20% top', end: '60% top', scrub: true } });
 }
 ScrollTrigger.create({ trigger: '.hero', start: 'top bottom', end: 'bottom top', onToggle: s => { active.hero = s.isActive; direct(); } });
 
